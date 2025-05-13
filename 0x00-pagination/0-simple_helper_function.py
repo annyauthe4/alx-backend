@@ -3,8 +3,9 @@
 and return a tuple of size two containing a start and end indices
 to return in a list for the pagination parameters.
 """
-
 from typing import Tuple
+
+
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Returns a tuple of size two.
 
