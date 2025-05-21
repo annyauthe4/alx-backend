@@ -3,12 +3,13 @@
 html file to display an output as page.
 """
 from flask import Flask, render_template
+from typing import Any
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def index():
+def index() -> str:
     """Renders html page."""
     return render_template('0-index.html')
 
