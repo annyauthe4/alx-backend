@@ -26,6 +26,7 @@ def get_locale() -> str:
     """Returns best match for language"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """Route handler for the home page."""
