@@ -59,3 +59,5 @@ To extract all the texts to a .pot file - <i>pot - Portable Object Template</i>,
 <code>(venv) $ pybabel extract -F babel.cfg -k _l -o messages.pot .</code>
 
 The pybabel extract command reads the configuration file given in the -F option, then scans all the code and template files in the directories that match the configured sources, starting from the directory given in the command (the current directory or . in this case). By default, pybabel will look for _() as a text marker, but I have also used the lazy version, which I imported as _l(), so I need to tell the tool to look for those too with the -k _l. The -o option provides the name of the output file.
+
+<h1>Author: Oluwaseun Otetumo</h1>
