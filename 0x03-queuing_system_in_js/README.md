@@ -6,8 +6,10 @@ Redis (REmote DIctionary Server) is an in-memory key-value data store, often use
     <li>
       Install Redis on Ubuntu
       <code>
-       sudo apt update
-       sudo apt install redis-server
+       $ wget http://download.redis.io/releases/redis-6.0.10.tar.gz
+       $ tar xzf redis-6.0.10.tar.gz
+       $ cd redis-6.0.10
+       $ make
       </code>
     </li>
 
