@@ -35,3 +35,10 @@ Redis (REmote DIctionary Server) is an in-memory key-value data store, often use
       </code>
     </li>
 </ol>
+
+<h3> Required files for the Project </h3>
+  <ul>
+    <li> package.json (configuration file)</li>
+    <li> .babelrc</li>
+  </ul>
+  Then run <code> $ npm install </code>
