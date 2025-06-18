@@ -44,3 +44,8 @@ Redis (REmote DIctionary Server) is an in-memory key-value data store, often use
     <li> .babelrc</li>
   </ul>
   Then run <code> $ npm install </code>
+
+<h3> Run node js file on redis</h3>
+install redis-server: <code> sudo apt install redis-server </code>
+run server: <code> $ redis-server </code>
+run file: <code> npm run dev <filename> </code>
