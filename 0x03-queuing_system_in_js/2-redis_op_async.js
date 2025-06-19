@@ -6,10 +6,6 @@ import { promisify } from 'util'
 // Create a client
 const client = createClient();
 
-client.on('connect', () => {
-  console.log('Redis client connected to the server');
-});
-
 // Log error message
 client.on('error', (err) => {
   console.log(`Redis client not connected to the server: ${err.message}`);
@@ -28,11 +24,18 @@ async function displaySchoolValue(schoolName) {
     const value = await getAsync(schoolName);
     console.log(value);
   } catch (err) {
-    console.error(`Error: err.massage`);
+    console.error('Error:', err.message);
   }
 }
 
 // Call functions
-displaySchoolValue('ALX');
-setNewSchool('ALXSanFrancisco', '100');
-displaySchoolValue('ALXSanFrancisco');
+async function main() {
+  await displaySchoolValue('ALX');
+  setNewSchool('ALXSanFrancisco', '100');
+  await displaySchoolValue('ALXSanFrancisco');
+}
+
+client.on('connect', async () => {
+  console.log('Redis client connected to the server');
+  await main();
+});
